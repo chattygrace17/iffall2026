@@ -1,0 +1,258 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px;
+    font-family: "Open Sans", sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+
+h1 {
+    font-size: 34px;
+    margin: 0 0 40px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.box {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a:focus-visible {
+    outline: 3px solid #2f6fed;
+    outline-offset: 6px;
+}
+
+/* Apple: frosted glass, quiet and precise */
+
+.apple-button {
+    font-family: "Inter", -apple-system, sans-serif;
+    font-size: 17px;
+    color: #1d1d1f;
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 980px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(240, 240, 245, 0.9));
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06), 0 8px 24px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.apple-button .chevron {
+    display: inline-block;
+    color: #0071e3;
+    transition: transform 0.3s ease;
+}
+
+.apple-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06), 0 14px 32px rgba(0, 0, 0, 0.12);
+}
+
+.apple-button:hover .chevron {
+    transform: translateX(4px);
+}
+
+.apple-button:active {
+    transform: scale(0.97);
+}
+
+/* The New Yorker: editorial, cream paper, thin rules */
+
+.newyorker-button {
+    position: relative;
+    font-family: "Libre Caslon Text", Georgia, serif;
+    font-size: 24px;
+    letter-spacing: 0.02em;
+    color: #111;
+    text-decoration: none;
+    text-align: center;
+    padding: 18px 26px;
+    background-color: #fbf8f1;
+    border-top: 3px double #111;
+    border-bottom: 3px double #111;
+}
+
+.newyorker-button .the {
+    display: block;
+    font-style: italic;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.newyorker-button::after {
+    content: "";
+    position: absolute;
+    left: 26px;
+    right: 26px;
+    bottom: 12px;
+    height: 1px;
+    background-color: #c4302b;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.newyorker-button:hover::after {
+    transform: scaleX(1);
+}
+
+/* Harley-Davidson: black steel, orange heat, cut corners */
+
+.box-dark {
+    background-color: #111;
+}
+
+.harley-button {
+    font-family: "Oswald", "Arial Narrow", sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #f2f2f2;
+    text-decoration: none;
+    padding: 16px 30px;
+    background: linear-gradient(to bottom, #3a3a3a, #121212 55%, #1e1e1e);
+    border-bottom: 4px solid #f26522;
+    clip-path: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    transition: color 0.2s, background 0.2s, border-color 0.2s;
+}
+
+.harley-button:hover {
+    color: #f26522;
+    background: linear-gradient(to bottom, #4a4a4a, #1a1a1a 55%, #262626);
+    border-color: #ff8a3d;
+}
+
+.harley-button:active {
+    color: #fff;
+    background: #f26522;
+}
+
+/* Exploding Kittens: loud, crooked, cartoony */
+
+.kittens-button {
+    font-family: "Luckiest Guy", "Arial Black", sans-serif;
+    font-size: 26px;
+    line-height: 1.05;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    padding: 16px 24px 12px;
+    background-color: #e6332a;
+    border: 4px solid #111;
+    border-radius: 14px 30px 10px 26px;
+    text-shadow: 3px 3px 0 #111;
+    box-shadow: 6px 6px 0 #111;
+    transform: rotate(-4deg);
+    transition: transform 0.1s, box-shadow 0.1s, background-color 0.2s;
+}
+
+.kittens-button:hover {
+    background-color: #f7b500;
+    animation: shake 0.3s infinite;
+}
+
+.kittens-button:active {
+    animation: none;
+    transform: rotate(-4deg) translate(6px, 6px);
+    box-shadow: 0 0 0 #111;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(-4deg) translate(0, 0);
+    }
+
+    25% {
+        transform: rotate(-2deg) translate(-2px, 1px);
+    }
+
+    50% {
+        transform: rotate(-6deg) translate(2px, -1px);
+    }
+
+    75% {
+        transform: rotate(-3deg) translate(-1px, -2px);
+    }
+
+    100% {
+        transform: rotate(-4deg) translate(0, 0);
+    }
+}
+
+/* Bissinger's: dark chocolate with gold foil */
+
+.bissingers-button {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    text-decoration: none;
+    background: radial-gradient(circle at 35% 30%, #5a3426, #2a140d 70%);
+    border: 3px double #c9a24a;
+    box-shadow: 0 10px 24px rgba(42, 20, 13, 0.35);
+    transition: transform 0.3s ease;
+}
+
+.bissingers-button .script {
+    font-family: "Pinyon Script", cursive;
+    font-size: 38px;
+    line-height: 1;
+    background: linear-gradient(135deg, #a8822f, #f3dd9b 45%, #b48b34 60%, #f0d68a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.bissingers-button .small {
+    margin-top: 6px;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #c9a24a;
+}
+
+.bissingers-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 236, 180, 0.25), transparent);
+    transform: skewX(-20deg);
+}
+
+.bissingers-button:hover {
+    transform: scale(1.05);
+}
+
+.bissingers-button:hover::before {
+    animation: shine 0.9s ease;
+}
+
+@keyframes shine {
+    to {
+        left: 125%;
+    }
+}
