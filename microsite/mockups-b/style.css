@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Jost", sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    color: #26252d;
+    background: linear-gradient(#f3c9cf, #fbf8f4 40%, #cfe0f2);
+}
+
+header {
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+.logo {
+    font-family: "Pinyon Script", cursive;
+    font-size: 2rem;
+    color: #26252d;
+    text-decoration: none;
+}
+
+nav {
+    margin-top: 0.5rem;
+}
+
+nav a {
+    margin: 0 0.75rem;
+    color: #26252d;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+}
+
+nav a:hover {
+    color: #e0443c;
+}
+
+main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+    text-align: center;
+}
+
+h1,
+h2 {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-weight: 400;
+    color: transparent;
+    -webkit-text-stroke: 1px #26252d;
+}
+
+h1 {
+    font-size: 6rem;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 3rem;
+    margin: 3rem 0 1rem;
+}
+
+.subtitle {
+    letter-spacing: 0.4em;
+    font-size: 0.8rem;
+    color: #6d6a78;
+}
+
+img {
+    width: 100%;
+    margin-top: 2.5rem;
+    border-radius: 30px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e0b8be;
+}
+
+li span {
+    display: block;
+    color: #e0443c;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+@media (max-width: 700px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    nav a {
+        margin: 0 0.4rem;
+        font-size: 0.7rem;
+    }
+}
