@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Jost", sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    color: #26252d;
+    background:
+    radial-gradient(circle at 10% 10%, #f3c9cf, transparent 35%),
+    radial-gradient(circle at 5% 60%, #9dbbe4, transparent 35%),
+     #fbf8f4;
+}
+
+img {
+    max-width: 100%;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+}
+
+.logo {
+    font-family: "Pinyon Script", cursive;
+    font-size: 1.8rem;
+    color: #26252d;
+    text-decoration: none;
+}
+
+nav a {
+    margin-left: 1.5rem;
+    color: #26252d;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+}
+
+nav a:hover {
+    color: #e0443c;
+}
+
+.outline {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    color: transparent;
+    -webkit-text-stroke: 1px #26252d;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 7rem;
+    line-height: 1.1;
+    margin: 1rem 0;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #e0443c;
+}
+
+
+.hero {
+    text-align: center;
+    padding: 5rem 1rem;
+}
+
+.spaced {
+    letter-spacing: 0.4em;
+}
+
+.small {
+    font-size: 0.8rem;
+    color: #6d6a78;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3rem;
+}
+
+.about div {
+    flex: 1;
+}
+
+.about img {
+    width: 50%;
+    border-radius: 40% 60% 50% 50%;
+}
+
+.red-link {
+    color: #e0443c;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+}
+
+.facts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3rem;
+}
+
+.facts p {
+    text-align: right;
+    font-size: 0.85rem;
+    color: #6d6a78;
+}
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+
+    nav a {
+        margin: 0 0.4rem;
+        font-size: 0.7rem;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 2.8rem;
+    }
+
+    .about {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .about img {
+        width: 100%;
+    }
+
+    .facts {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+    }
+}
