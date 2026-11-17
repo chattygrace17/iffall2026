@@ -1,0 +1,411 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #2b2a2e;
+  background: linear-gradient(#f4e2e2, #f6f1e8 400px);
+}
+
+a {
+  color: #2b2a2e;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+header,
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+header {
+  padding: 0.75rem 3rem;
+  background: rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid #2b2a2e;
+}
+
+.logo {
+  font-family: "Pinyon Script", cursive;
+  font-size: 2rem;
+  line-height: 1;
+  color: #2b2a2e;
+  text-decoration: none;
+}
+
+nav a {
+  display: inline-block;
+  margin: 0.2rem 0.1rem;
+  padding: 0.3rem 0.8rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  transition: background 0.3s, border-radius 0.3s;
+}
+
+nav a:nth-child(1):hover {
+  background: #b8dcc0;
+  border-radius: 50%;
+}
+
+nav a:nth-child(2):hover {
+  background: #cfe0f2;
+  border-radius: 25px 4px 25px 4px;
+}
+
+nav a:nth-child(3):hover {
+  background: #e8c4dc;
+  border-radius: 40% 60% 50% 50%;
+}
+
+nav a:nth-child(4):hover {
+  background: #e6dcf3;
+  border-radius: 4px 25px 4px 25px;
+}
+
+nav a:nth-child(5):hover {
+  background: #f6e7b4;
+  border-radius: 20px;
+}
+
+nav a.current {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 4rem 3rem 5rem;
+}
+
+.intro {
+  text-align: center;
+}
+
+h1,
+h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 400;
+  color: #2b2a2e;
+}
+
+h1 {
+  font-size: 5.5rem;
+  font-style: italic;
+  line-height: 1.1;
+  background-image: linear-gradient(90deg, #a8326e, #6f45b5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+h2 {
+  font-size: 2.3rem;
+  line-height: 1.15;
+  margin: 3rem 0 1rem;
+}
+
+h3 {
+  margin: 1rem 0 0.25rem;
+  font-size: 0.78rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #6d6a78;
+}
+
+.subtitle {
+  margin-top: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+  color: #6d6a78;
+}
+
+.hero {
+  margin-top: 2.5rem;
+  max-height: 520px;
+  object-fit: cover;
+  border: 10px solid white;
+}
+
+p+p {
+  margin-top: 1rem;
+}
+
+.big {
+  margin-top: 1.5rem;
+  padding-left: 1rem;
+  border-left: 2px solid #a33c5e;
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-size: 1.6rem;
+  line-height: 1.35;
+}
+
+.carousel {
+  overflow: hidden;
+  margin-top: 1.25rem;
+}
+
+.track {
+  display: flex;
+  gap: 0.75rem;
+  width: max-content;
+  padding-right: 0.75rem;
+  animation: slide 30s linear infinite;
+}
+
+.carousel:hover .track {
+  animation-play-state: paused;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.carousel img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border: 5px solid white;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  margin-top: 4rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid #2b2a2e;
+}
+
+.row.wide {
+  grid-template-columns: 3fr 2fr;
+}
+
+.row.flip {
+  grid-template-columns: 2fr 3fr;
+}
+
+.row h2,
+.row h3:first-child {
+  margin-top: 0;
+}
+
+.row h2.small-gap {
+  margin-top: 2.5rem;
+}
+
+.three {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.three section+section {
+  padding-left: 2.5rem;
+  border-left: 1px solid #d8cfc4;
+  margin-left: -1.25rem;
+}
+
+.four {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1.5rem;
+}
+
+main>h2 {
+  margin-top: 4rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid #2b2a2e;
+}
+
+.three h2 {
+  font-size: 1.7rem;
+  margin-top: 0;
+}
+
+.tilt {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: 8px solid white;
+  transform: rotate(-2deg);
+}
+
+.flip .tilt {
+  transform: rotate(2deg);
+}
+
+section .tilt {
+  margin-top: 3rem;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #d8cfc4;
+}
+
+li span {
+  display: block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #6d6a78;
+}
+
+.card {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #6d6a78;
+}
+
+.card img {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border: 6px solid white;
+  margin-bottom: 0.6rem;
+  transition: transform 0.3s;
+}
+
+.card:hover img {
+  transform: rotate(-2deg);
+}
+
+.card span {
+  display: block;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.35rem;
+  color: #2b2a2e;
+}
+
+.next {
+  display: inline-block;
+  margin-top: 4rem;
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #a33c5e;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem 1.5rem;
+}
+
+.gallery img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 6px solid white;
+}
+
+figcaption {
+  margin-top: 0.4rem;
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #6d6a78;
+}
+
+footer {
+  padding: 2rem 3rem;
+  border-top: 1px solid #2b2a2e;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+    url("images/pattern.jpg");
+  background-size: auto, 240px;
+}
+
+footer p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 800px) {
+
+  header,
+  .footer-top {
+    flex-direction: column;
+  }
+
+  header {
+    padding: 1rem;
+  }
+
+  main {
+    padding: 2.5rem 1.5rem 3rem;
+  }
+
+  h1 {
+    font-size: 3.6rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  nav {
+    text-align: center;
+  }
+
+  nav a {
+    margin: 0;
+    padding: 0.3rem 0.4rem;
+    font-size: 0.65rem;
+    letter-spacing: 0;
+  }
+
+  .row,
+  .row.wide,
+  .row.flip,
+  .three {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .three section+section {
+    padding-left: 0;
+    border-left: none;
+    margin-left: 0;
+  }
+
+  .tilt,
+  .flip .tilt {
+    transform: none;
+  }
+
+  .four,
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  footer {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+}
